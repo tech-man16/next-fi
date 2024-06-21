@@ -1,0 +1,5 @@
+Reference: 
+
+1) upload file: https://medium.com/@xhowais/next-js-file-upload-api-tutorial-local-directroy-7ec039efbd66#:~:text=To%20upload%20a%20file%2C%20make,directory%20with%20a%20modified%20filename.
+
+2) Download file: https://www.codeconcisely.com/posts/nextjs-app-router-api-download-file/
