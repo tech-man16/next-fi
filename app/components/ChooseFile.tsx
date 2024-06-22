@@ -15,9 +15,9 @@ export function ChooseFile() {
         const formData = new FormData();
         formData.append("file", file);
 
-        fetch("/app/api/upload", {
+        fetch("./app/api/upload", {
             method: "POST",
-            body: formData,
+            body: "", //formData,
         })
             .then(res => res.json())
             .then(data => {
