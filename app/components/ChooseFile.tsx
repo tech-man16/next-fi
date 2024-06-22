@@ -1,10 +1,8 @@
 'use client';
-import { NextApiRequest, NextApiResponse } from 'next';
 
 import { Button } from '@nextui-org/react';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 
 export function ChooseFile() {
     const [file, uploadFile]: any = useState();
@@ -17,7 +15,7 @@ export function ChooseFile() {
         const formData = new FormData();
         formData.append("file", file);
 
-        fetch("/api/upload", {
+        fetch("./api/upload", {
             method: "POST",
             body: formData,
         })
@@ -41,7 +39,7 @@ export function ChooseFile() {
         */
 
         (async () => {
-            const req = await fetch('/api/download', {
+            const req = await fetch('./api/download', {
                 method: "POST",
                 body: ""
             })
@@ -49,7 +47,7 @@ export function ChooseFile() {
             const fileList: any[] = res.message;
 
             fileList.forEach((files, ind) => {
-                fileList[ind] = <li> <Link href={'/api/download?file=' + `${files}`}> <a download={`${files}`}> {files} </a> </Link> </li>
+                fileList[ind] = <li> <Link href={'./api/download?file=' + `${files}`}> <a download={`${files}`}> {files} </a> </Link> </li>
             })
             updateLink(fileList);
         })();
@@ -80,7 +78,7 @@ export function ChooseFile() {
                         <p className="text-xl text-gray-500 dark:text-gray-400">word doc or docx </p>
 
                     </div>
-                    <input id="dropzone-file" type="file" className="" onChange={(e) => {
+                    <input id="dropzone-file" type="file" className="hidden" onChange={(e) => {
                         e.preventDefault();
                         const data: any = e.target.files;
                         uploadFile(data[0]);
@@ -89,10 +87,18 @@ export function ChooseFile() {
                     }} />
                 </label>
 
-                {uploadBool && <> {fname} </>}
-                <Button onClick={submit}> Upload </Button>
 
-                {bool && <ul> {link} </ul>}
+
+
+
+            </div>
+            
+            <div className="flex flex-col">
+                <span> {uploadBool && <> {fname} </>} </span>
+                <Button onClick={submit}> Upload </Button>
+                <section>
+                    {bool && <ul> {link} </ul>}
+                </section>
 
             </div>
 
