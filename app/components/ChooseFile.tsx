@@ -47,7 +47,7 @@ export function ChooseFile() {
             const fileList: any[] = res.message;
 
             fileList.forEach((files, ind) => {
-                fileList[ind] = <li> <Link href={'./api/download?file=' + `${files}`}> <a download={`${files}`}> {files} </a> </Link> </li>
+                fileList[ind] = <li> <Link href={'./app/api/download?file=' + `${files}`}> <a download={`${files}`}> {files} </a> </Link> </li>
             })
             updateLink(fileList);
         })();
