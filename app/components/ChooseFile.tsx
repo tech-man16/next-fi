@@ -14,7 +14,7 @@ export function ChooseFile() {
     const submit = async() => {
         //const formData = new FormData();
         //formData.append("file", file);
-
+        /*
         fetch("./app/api/download", {
             method: "POST",
             body: "", //formData,
@@ -24,6 +24,11 @@ export function ChooseFile() {
                 console.log(data)
                 window.location.reload();
             })
+            */
+
+        const res = await fetch('./app/api/download',{method:"POST",body:""});
+        const data = await res.json();
+        console.log(data.message);
     }
     /*
     useEffect(() => {
