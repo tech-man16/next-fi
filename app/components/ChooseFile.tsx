@@ -11,7 +11,7 @@ export function ChooseFile() {
     const [arr, updateArray]: any = useState();
     const [uploadBool, setUploadBool] = useState(false);
     const [fname, updateFname] = useState("");
-    const submit = () => {
+    const submit = async() => {
         const formData = new FormData();
         formData.append("file", file);
 
