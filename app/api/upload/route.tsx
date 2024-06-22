@@ -25,5 +25,7 @@ export const POST = async (req: any, res: any) => {
         }
     }
 
-    catch(e) {return NextResponse.json({message:"Loading..."}) };
+    catch(e) {
+        return NextResponse.json( {message:"Loading..."} ) 
+    };
 }
