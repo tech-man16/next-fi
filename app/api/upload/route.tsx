@@ -5,6 +5,7 @@ import { writeFile,readdir } from "fs/promises";
 export const POST = async (req: any, res: any) => {
 
     try{
+        /*
         const formData = await req.formData();
         const file = formData.get("file");
         if (!file) {
@@ -22,7 +23,8 @@ export const POST = async (req: any, res: any) => {
     
             console.log('\n\n\n', e)
             return NextResponse.json({ message: 'Uploaded Failed', status: 500 }, { status: 500 })
-        }
+        }*/
+        return NextResponse.json({message:"Successfull",status:200}, {status:500})
     }
 
     catch(e) {
