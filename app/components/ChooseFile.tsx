@@ -15,7 +15,7 @@ export function ChooseFile() {
         const formData = new FormData();
         formData.append("file", file);
 
-        fetch("./api/upload", {
+        fetch("./app/api/upload", {
             method: "POST",
             body: formData,
         })
@@ -39,7 +39,7 @@ export function ChooseFile() {
         */
 
         (async () => {
-            const req = await fetch('./api/download', {
+            const req = await fetch('./app/api/download', {
                 method: "POST",
                 body: ""
             })
