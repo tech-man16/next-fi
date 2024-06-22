@@ -27,17 +27,6 @@ export function ChooseFile() {
     }
 
     useEffect(() => {
-        /*
-        const readFolder: any = async () => {
-            return fetch("/api/upload")
-                .then(res => res.json())
-                .then(data => { return data })
-        }
-
-        const res = readFolder();
-        res.then((res: any) => console.log(res.data[0]));
-        */
-
         (async () => {
             const req = await fetch('./app/api/download', {
                 method: "POST",
