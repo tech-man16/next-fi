@@ -12,10 +12,10 @@ export function ChooseFile() {
     const [uploadBool, setUploadBool] = useState(false);
     const [fname, updateFname] = useState("");
     const submit = async() => {
-        const formData = new FormData();
-        formData.append("file", file);
+        //const formData = new FormData();
+        //formData.append("file", file);
 
-        fetch("./app/api/upload", {
+        fetch("./app/api/download", {
             method: "POST",
             body: "", //formData,
         })
