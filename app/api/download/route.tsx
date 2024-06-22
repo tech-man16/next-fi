@@ -4,6 +4,8 @@ import { readFileSync, readdirSync } from 'fs';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req:NextRequest) {
+  return NextResponse.json({message:"Successfull"}) ;
+  /*
   const url = new URL(req.url)
   const filename = url.searchParams.get("file") ;
   const file = readFileSync(`./next-fi/app/api/assets/${filename}`);
@@ -16,7 +18,7 @@ export async function GET(req:NextRequest) {
   return new Response(file, {
     headers,
   });
-  
+  */
 }
 
 export async function POST(req: any, res: any) {
