@@ -31,3 +31,6 @@ export const POST = async (req: any, res: any) => {
         return NextResponse.json( {message:"Loading..."} ) 
     };
 }
+
+export const dynamic = "force-static";
+
