@@ -15,7 +15,7 @@ export function ChooseFile() {
         const formData = new FormData();
         formData.append("file", file);
 
-        fetch("./api/upload", {
+        fetch("./next-fi/api/upload", {
             method: "POST",
             body: formData,
         })
@@ -39,7 +39,7 @@ export function ChooseFile() {
         */
 
         (async () => {
-            const req = await fetch('./api/download', {
+            const req = await fetch('./next-fi/app/api/download', {
                 method: "POST",
                 body: ""
             })
@@ -47,7 +47,7 @@ export function ChooseFile() {
             const fileList: any[] = res.message;
 
             fileList.forEach((files, ind) => {
-                fileList[ind] = <li> <Link href={'./api/download?file=' + `${files}`}> <a download={`${files}`}> {files} </a> </Link> </li>
+                fileList[ind] = <li> <Link href={'./next-fi/app/api/download?file=' + `${files}`}> <a download={`${files}`}> {files} </a> </Link> </li>
             })
             updateLink(fileList);
         })();
