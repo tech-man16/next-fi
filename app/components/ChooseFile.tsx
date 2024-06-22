@@ -27,7 +27,7 @@ export function ChooseFile() {
             })
             */
 
-        const res = await fetch('./app/api/download',{method:"POST",body:""});
+        const res = await fetch('./app/api/download');
         const data = await res.json();
         console.log(data.message);
     }
