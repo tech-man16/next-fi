@@ -24,7 +24,7 @@ export async function GET(req:NextRequest) {
 }
 
 export async function POST(req: any, res: any) {
-  const file = readdirSync(process.cwd() + './app/api/assets')
+  const file = readdirSync(process.cwd() + '/app/api/assets')
 
   return NextResponse.json({ message: file });
 }
