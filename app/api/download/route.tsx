@@ -9,3 +9,5 @@ export async function GET() {
 export async function POST (req: any, res: any) {
   return NextResponse.json({message:"Success from post",status:200},{status:200})
 }
+
+export const dynamic = "force-static";
