@@ -39,7 +39,7 @@ export function ChooseFile() {
         */
 
         (async () => {
-            const req = await fetch('./api/download', {
+            const req = await fetch('/api/download', {
                 method: "POST",
                 body: ""
             })
