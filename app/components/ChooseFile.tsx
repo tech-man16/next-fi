@@ -25,7 +25,7 @@ export function ChooseFile() {
                 window.location.reload();
             })
     }
-
+    /*
     useEffect(() => {
         (async () => {
             const req = await fetch('./app/api/download', {
@@ -44,7 +44,7 @@ export function ChooseFile() {
 
 
     }, [file]);
-
+    */
     return (
         <>
             <div className="flex items-center justify-center w-96">
