@@ -3,7 +3,7 @@ import path from "path";
 import { writeFile,readdir } from "fs/promises";
 
 export const POST = async (req: any, res: any) => {
-    return NextResponse.json({message:"Successfull",status:200}, {status:500}) ;
+    return NextResponse.json({message:"Successfull",status:200,op:"hello"}, {status:500}) ;
     try{
         /*
         const formData = await req.formData();
