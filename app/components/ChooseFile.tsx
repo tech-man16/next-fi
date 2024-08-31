@@ -28,9 +28,9 @@ export function ChooseFile() {
             })
             */
 
-        const res = await fetch('./api/download');
-        const data = await res.json();
-        console.log(data.message);
+        //const res = await fetch('./api/download');
+        //const data = await res.json();
+        console.log("submit clicked!!");
     }
     /*
     useEffect(() => {
